@@ -12,6 +12,9 @@ namespace ProjectBW5.Data
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<ApplicationRole> ApplicationRoles { get; set; }
         public DbSet<ApplicationUserRole> ApplicationUserRoles { get; set; }
+        public DbSet<Animal> Animals { get; set; }
+        public DbSet<Examination> Examinations { get; set; }
+        public DbSet<Hospitalization> Hospitalizations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -22,6 +25,16 @@ namespace ProjectBW5.Data
             modelBuilder.Entity<ApplicationUserRole>().HasOne(ur => ur.Role).WithMany(r => r.ApplicationUserRoles).HasForeignKey(ur => ur.RoleId);
 
             modelBuilder.Entity<ApplicationUserRole>().Property(p => p.Date).HasDefaultValueSql("GETDATE()").IsRequired(true);
+        
+            modelBuilder.Entity<Examination>().HasOne(e => e.Animal).WithMany(a=> a.Examinations).HasForeignKey(e=> e.AnimalId);
+
+            modelBuilder.Entity<Examination>().HasOne(e => e.User).WithMany(u => u.Examinations).HasForeignKey(e => e.VetId);
+
+            modelBuilder.Entity<Hospitalization>().HasOne(h => h.Animal).WithMany(a => a.Hospitalizations).HasForeignKey(h => h.AnimalId);
+
+            modelBuilder.Entity<Hospitalization>().HasOne(h => h.User).WithMany(u => u.Hospitalizations).HasForeignKey(h => h.VetId);
+
+            modelBuilder.Entity<Animal>().Property(p => p.RegistrationDate).HasDefaultValueSql("GETDATE()").IsRequired(true);
         }
     }
 }

@@ -12,5 +12,7 @@ namespace ProjectBW5.Models
         [Required]
         public required DateOnly BirthDate { get; set; }
         public ICollection<ApplicationUserRole>? ApplicationUserRoles { get; set; }
+        public ICollection<Examination>? Examinations { get; set; }
+        public ICollection<Hospitalization>? Hospitalizations { get; set; }
     }
 }
