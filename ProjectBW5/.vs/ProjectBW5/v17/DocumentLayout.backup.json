@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\models\\scontrino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\models\\scontrino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\models\\farmaco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\models\\farmaco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\models\\vendita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\models\\vendita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,15 +46,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Program.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Program.cs",
-              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Program.cs",
-              "RelativeToolTip": "ProjectBW5\\Program.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Farmaco.cs",
+              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Farmaco.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Models\\Farmaco.cs",
+              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Farmaco.cs",
+              "RelativeToolTip": "ProjectBW5\\Models\\Farmaco.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:13:27.544Z",
+              "WhenOpened": "2025-03-31T13:31:17.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Scontrino.cs",
+              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Scontrino.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Models\\Scontrino.cs",
+              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Scontrino.cs*",
+              "RelativeToolTip": "ProjectBW5\\Models\\Scontrino.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T13:31:05.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Vendita.cs",
+              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Vendita.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Models\\Vendita.cs",
+              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Vendita.cs",
+              "RelativeToolTip": "ProjectBW5\\Models\\Vendita.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T13:30:29.883Z",
               "EditorCaption": ""
             }
           ]

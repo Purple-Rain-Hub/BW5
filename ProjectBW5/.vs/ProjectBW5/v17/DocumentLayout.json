@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\data\\bw5dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\data\\bw5dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,14 +39,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Program.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Program.cs",
-              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Program.cs",
-              "RelativeToolTip": "ProjectBW5\\Program.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAE4AAAARAAAAAAAAAA==",
+              "Title": "BW5DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Data\\BW5DbContext.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Data\\BW5DbContext.cs",
+              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Data\\BW5DbContext.cs",
+              "RelativeToolTip": "ProjectBW5\\Data\\BW5DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:13:27.544Z",
+              "WhenOpened": "2025-03-31T13:49:36.938Z",
               "EditorCaption": ""
             }
           ]
