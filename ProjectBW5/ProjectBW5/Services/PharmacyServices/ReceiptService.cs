@@ -66,6 +66,9 @@ namespace ProjectBW5.Services
             if (medicine == null || sale == null)
                 return false;
 
+            if (!medicine.IsAvailable)
+                return false;
+
             if (medicine.RequiresPrescription && string.IsNullOrWhiteSpace(sale.PrescriptionNumber))
                 return false;
 
@@ -105,6 +108,23 @@ namespace ProjectBW5.Services
         public async Task<bool> DeleteAsync(ReceiptDeleteDto dto)
         {
             return await DeleteAsync(dto.MedicineId, dto.SaleId);
+        }
+
+        public async Task<decimal> CalculateTotalSaleAmountAsync(Guid saleId)
+        {
+            var receipts = await _context.Receipts
+                .Include(r => r.Medicine)
+                .Where(r => r.SaleId == saleId)
+                .ToListAsync();
+
+            decimal totalAmount = 0;
+
+            foreach (var receipt in receipts)
+            {
+                totalAmount += receipt.Medicine.Price * receipt.Quantity;
+            }
+
+            return totalAmount;
         }
     }
 }

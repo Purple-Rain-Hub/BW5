@@ -382,6 +382,49 @@
         }
       }
     },
+    "/api/Receipt/total/{saleId}": {
+      "get": {
+        "tags": [
+          "Receipt"
+        ],
+        "parameters": [
+          {
+            "name": "saleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Sale": {
       "get": {
         "tags": [
@@ -562,7 +605,9 @@
       },
       "MedicineCreateDto": {
         "required": [
+          "isAvailable",
           "name",
+          "price",
           "requiresPrescription",
           "storageLocationId",
           "supplierCompany",
@@ -587,6 +632,15 @@
             "type": "string"
           },
           "requiresPrescription": {
+            "type": "boolean"
+          },
+          "price": {
+            "maximum": 9999,99,
+            "minimum": 1,
+            "type": "number",
+            "format": "double"
+          },
+          "isAvailable": {
             "type": "boolean"
           }
         },
@@ -617,6 +671,13 @@
           },
           "requiresPrescription": {
             "type": "boolean"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "isAvailable": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -624,11 +685,10 @@
       "MedicineUpdateDto": {
         "required": [
           "id",
-          "name",
+          "isAvailable",
+          "price",
           "requiresPrescription",
-          "storageLocationId",
-          "supplierCompany",
-          "usageList"
+          "storageLocationId"
         ],
         "type": "object",
         "properties": {
@@ -636,23 +696,20 @@
             "type": "string",
             "format": "uuid"
           },
-          "name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "supplierCompany": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "usageList": {
-            "minLength": 1,
-            "type": "string"
-          },
           "storageLocationId": {
             "minLength": 1,
             "type": "string"
           },
           "requiresPrescription": {
+            "type": "boolean"
+          },
+          "price": {
+            "maximum": 9999,99,
+            "minimum": 1,
+            "type": "number",
+            "format": "double"
+          },
+          "isAvailable": {
             "type": "boolean"
           }
         },
@@ -769,10 +826,14 @@
         "type": "object",
         "properties": {
           "customerFiscalCode": {
+            "maxLength": 16,
             "minLength": 1,
+            "pattern": "^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$",
             "type": "string"
           },
           "prescriptionNumber": {
+            "maxLength": 20,
+            "pattern": "^\\d{8,20}$",
             "type": "string",
             "nullable": true
           }
@@ -813,10 +874,14 @@
             "format": "uuid"
           },
           "customerFiscalCode": {
+            "maxLength": 16,
             "minLength": 1,
+            "pattern": "^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$",
             "type": "string"
           },
           "prescriptionNumber": {
+            "maxLength": 20,
+            "pattern": "^\\d{8,20}$",
             "type": "string",
             "nullable": true
           }

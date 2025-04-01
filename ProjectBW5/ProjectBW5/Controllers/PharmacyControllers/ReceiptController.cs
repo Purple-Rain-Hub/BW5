@@ -17,7 +17,7 @@ namespace ProjectBW5.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Pharmacist,Admin")]
         public async Task<ActionResult<List<ReceiptReadDto>>> GetAll()
         {
             var receipts = await _receiptService.GetAllAsync();
@@ -25,18 +25,18 @@ namespace ProjectBW5.Controllers
         }
 
         [HttpGet("{medicineId:guid}/{saleId:guid}")]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Pharmacist,Admin")]
         public async Task<ActionResult<ReceiptReadDto>> Get(Guid medicineId, Guid saleId)
         {
             var receipt = await _receiptService.GetAsync(medicineId, saleId);
             if (receipt == null)
-                return NotFound("Receipt not found for the provided MedicineId and SaleId.");
+                return NotFound("Receipt not found.");
 
             return Ok(receipt);
         }
 
         [HttpPost]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Create([FromBody] ReceiptCreateDto dto)
         {
             if (!ModelState.IsValid)
@@ -46,14 +46,14 @@ namespace ProjectBW5.Controllers
             if (!success)
             {
                 return BadRequest("Cannot complete receipt: either the medicine or sale was not found, " +
-                                  "the receipt already exists, or the medicine requires a prescription but none was provided.");
+                                  "the receipt already exists, the medicine is not available, or a prescription was required but not provided.");
             }
 
             return Ok("Receipt successfully created.");
         }
 
         [HttpDelete("{medicineId:guid}/{saleId:guid}")]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(Guid medicineId, Guid saleId)
         {
             var success = await _receiptService.DeleteAsync(medicineId, saleId);
@@ -61,6 +61,14 @@ namespace ProjectBW5.Controllers
                 return NotFound("Receipt not found or already deleted.");
 
             return Ok("Receipt successfully deleted.");
+        }
+
+        [HttpGet("total/{saleId:guid}")]
+        [Authorize(Roles = "Pharmacist,Admin")]
+        public async Task<ActionResult<decimal>> GetTotal(Guid saleId)
+        {
+            var total = await _receiptService.CalculateTotalSaleAmountAsync(saleId);
+            return Ok(total);
         }
     }
 }

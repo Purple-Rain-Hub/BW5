@@ -224,6 +224,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ProjectBW5.Controllers.ReceiptController",
+    "Method": "GetTotal",
+    "RelativePath": "api/Receipt/total/{saleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "saleId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Decimal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ProjectBW5.Controllers.SaleController",
     "Method": "GetAll",
     "RelativePath": "api/Sale",
