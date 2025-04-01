@@ -15,6 +15,7 @@ namespace ProjectBW5.Data
         public DbSet<Animal> Animals { get; set; }
         public DbSet<Examination> Examinations { get; set; }
         public DbSet<Hospitalization> Hospitalizations { get; set; }
+        public DbSet<StrayHospital> StrayHospitals { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +36,14 @@ namespace ProjectBW5.Data
             modelBuilder.Entity<Hospitalization>().HasOne(h => h.User).WithMany(u => u.Hospitalizations).HasForeignKey(h => h.VetId);
 
             modelBuilder.Entity<Animal>().Property(p => p.RegistrationDate).HasDefaultValueSql("GETDATE()").IsRequired(true);
+
+            modelBuilder.Entity<Animal>().HasIndex(a => a.MicrochipNumber).IsUnique();
+
+            modelBuilder.Entity<StrayHospital>().Property(s => s.RegistrationDate).HasDefaultValueSql("GETDATE()").IsRequired(true);
+
+            modelBuilder.Entity<StrayHospital>().HasOne(s => s.User).WithMany(u => u.StrayHospitals).HasForeignKey(s => s.VetId);
+
+            modelBuilder.Entity<StrayHospital>().HasIndex(s => s.MicrochipNumber).IsUnique();
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjectBW5.DTOs.Examination;
-using ProjectBW5.DTOs.Registry;
 using ProjectBW5.Services.VetServices;
 
 namespace ProjectBW5.Controllers.VetControllers

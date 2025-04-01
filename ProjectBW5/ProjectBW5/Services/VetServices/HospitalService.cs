@@ -1,8 +1,6 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ProjectBW5.Data;
 using ProjectBW5.DTOs.Hospitalization;
-using ProjectBW5.DTOs.Registry;
 using ProjectBW5.Models;
 
 namespace ProjectBW5.Services.VetServices

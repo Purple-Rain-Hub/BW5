@@ -14,5 +14,6 @@ namespace ProjectBW5.Models
         public ICollection<ApplicationUserRole>? ApplicationUserRoles { get; set; }
         public ICollection<Examination>? Examinations { get; set; }
         public ICollection<Hospitalization>? Hospitalizations { get; set; }
+        public ICollection<StrayHospital>? StrayHospitals { get; set; }
     }
 }

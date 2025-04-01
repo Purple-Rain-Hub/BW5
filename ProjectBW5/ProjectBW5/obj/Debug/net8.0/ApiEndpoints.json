@@ -340,5 +340,131 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.StrayHospitalController",
+    "Method": "CreateStrayHospital",
+    "RelativePath": "api/StrayHospital",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createStrayHospitalDto",
+        "Type": "ProjectBW5.DTOs.StrayHospital.CreateStrayHospitalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.StrayHospitalController",
+    "Method": "UpdateStrayHospital",
+    "RelativePath": "api/StrayHospital",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateStrayHospital",
+        "Type": "ProjectBW5.DTOs.StrayHospital.CreateStrayHospitalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.StrayHospitalController",
+    "Method": "GetStrayHospitals",
+    "RelativePath": "api/StrayHospital",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.StrayHospitalController",
+    "Method": "DeleteStrayHospital",
+    "RelativePath": "api/StrayHospital/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.StrayHospitalController",
+    "Method": "GetStrayHospitalById",
+    "RelativePath": "api/StrayHospital/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.StrayHospitalController",
+    "Method": "GetActiveStrayHospitals",
+    "RelativePath": "api/StrayHospital/Active",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.StrayHospitalController",
+    "Method": "EndStrayHospital",
+    "RelativePath": "api/StrayHospital/EndDate/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.StrayHospitalController",
+    "Method": "GetStrayHospitalByMicrochip",
+    "RelativePath": "api/StrayHospital/Microchip",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "microchipNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
