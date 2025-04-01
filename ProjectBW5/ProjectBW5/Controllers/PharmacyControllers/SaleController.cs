@@ -17,6 +17,7 @@ namespace ProjectBW5.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Pharmacist,Admin")]
         public async Task<ActionResult<List<SaleReadDto>>> GetAll()
         {
             var sales = await _saleService.GetAllAsync();
@@ -24,17 +25,18 @@ namespace ProjectBW5.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Pharmacist,Admin")]
         public async Task<ActionResult<SaleReadDto>> GetById(Guid id)
         {
             var sale = await _saleService.GetByIdAsync(id);
             if (sale == null)
-                return NotFound();
+                return NotFound("Sale not found.");
 
             return Ok(sale);
         }
 
         [HttpPost]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Pharmacist,Admin")]
         public async Task<ActionResult> Create([FromBody] SaleCreateDto dto)
         {
             if (!ModelState.IsValid)
@@ -45,7 +47,7 @@ namespace ProjectBW5.Controllers
         }
 
         [HttpPut]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Update([FromBody] SaleUpdateDto dto)
         {
             if (!ModelState.IsValid)
@@ -53,20 +55,20 @@ namespace ProjectBW5.Controllers
 
             var result = await _saleService.UpdateAsync(dto);
             if (!result)
-                return NotFound();
+                return NotFound("Sale not found.");
 
-            return NoContent();
+            return Ok("Sale updated successfully.");
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(Guid id)
         {
             var result = await _saleService.DeleteAsync(id);
             if (!result)
-                return NotFound();
+                return NotFound("Sale not found.");
 
-            return NoContent();
+            return Ok("Sale deleted successfully.");
         }
     }
 }

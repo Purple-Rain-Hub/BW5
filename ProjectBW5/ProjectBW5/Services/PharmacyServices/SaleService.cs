@@ -47,7 +47,9 @@ namespace ProjectBW5.Services
             {
                 Id = Guid.NewGuid(),
                 CustomerFiscalCode = dto.CustomerFiscalCode,
-                PrescriptionNumber = dto.PrescriptionNumber
+                PrescriptionNumber = string.IsNullOrWhiteSpace(dto.PrescriptionNumber)
+                    ? null
+                    : dto.PrescriptionNumber
             };
 
             _context.Sales.Add(sale);
@@ -62,7 +64,9 @@ namespace ProjectBW5.Services
             if (sale == null) return false;
 
             sale.CustomerFiscalCode = dto.CustomerFiscalCode;
-            sale.PrescriptionNumber = dto.PrescriptionNumber;
+            sale.PrescriptionNumber = string.IsNullOrWhiteSpace(dto.PrescriptionNumber)
+                ? null
+                : dto.PrescriptionNumber;
 
             await _context.SaveChangesAsync();
             return true;
