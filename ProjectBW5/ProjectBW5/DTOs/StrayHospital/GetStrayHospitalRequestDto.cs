@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ProjectBW5.DTOs.StrayHospital
+﻿namespace ProjectBW5.DTOs.StrayHospital
 {
     public class GetStrayHospitalRequestDto
     {

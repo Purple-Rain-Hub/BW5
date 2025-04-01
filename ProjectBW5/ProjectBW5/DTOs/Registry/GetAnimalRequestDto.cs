@@ -1,8 +1,4 @@
-﻿using ProjectBW5.DTOs.Registry;
-using ProjectBW5.Models;
-using System.ComponentModel.DataAnnotations;
-
-namespace ProjectBW5.DTOs.Registry
+﻿namespace ProjectBW5.DTOs.Registry
 {
     public class GetAnimalRequestDto
     {

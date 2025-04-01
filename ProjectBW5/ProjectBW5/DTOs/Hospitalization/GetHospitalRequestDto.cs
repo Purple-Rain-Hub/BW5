@@ -1,8 +1,4 @@
-﻿using ProjectBW5.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace ProjectBW5.DTOs.Hospitalization
+﻿namespace ProjectBW5.DTOs.Hospitalization
 {
     public class GetHospitalRequestDto
     {

@@ -1,6 +1,4 @@
-﻿using ProjectBW5.DTOs.Registry;
-
-namespace ProjectBW5.DTOs.Hospitalization
+﻿namespace ProjectBW5.DTOs.Hospitalization
 {
     public class GetHospitalResponseDto
     {
