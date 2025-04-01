@@ -126,6 +126,111 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
+    "Method": "CreateHospital",
+    "RelativePath": "api/Hospital",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "createHospitalDto",
+        "Type": "ProjectBW5.DTOs.Hospitalization.CreateHospitalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
+    "Method": "UpdateHospital",
+    "RelativePath": "api/Hospital",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateHospital",
+        "Type": "ProjectBW5.DTOs.Hospitalization.CreateHospitalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
+    "Method": "GetHospitals",
+    "RelativePath": "api/Hospital",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
+    "Method": "DeleteHospital",
+    "RelativePath": "api/Hospital/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
+    "Method": "GetHospitalById",
+    "RelativePath": "api/Hospital/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
+    "Method": "EndHospital",
+    "RelativePath": "api/Hospital/EndDate/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ProjectBW5.Controllers.VeterinaryControllers.RegistryController",
     "Method": "CreateAnimal",
     "RelativePath": "api/Registry",

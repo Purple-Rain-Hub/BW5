@@ -2,7 +2,7 @@
 using ProjectBW5.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace ProjectBW5.DTOs.Artist
+namespace ProjectBW5.DTOs.Registry
 {
     public class GetAnimalRequestDto
     {

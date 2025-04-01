@@ -1,16 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ProjectBW5.Models;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace ProjectBW5.Models
+namespace ProjectBW5.DTOs.Hospitalization
 {
-    public class Hospitalization
+    public class CreateHospitalDto
     {
-        [Key]
-        public Guid Id { get; set; }
-        [Required]
-        public required Guid AnimalId { get; set; }
-        [ForeignKey("AnimalId")]
-        public Animal Animal { get; set; }
         [Required]
         public required DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
@@ -22,7 +17,5 @@ namespace ProjectBW5.Models
         public required string HospitalTreatment { get; set; }
         [Required]
         public required string VetId { get; set; }
-        [ForeignKey("VetId")]
-        public ApplicationUser User { get; set; }
     }
 }

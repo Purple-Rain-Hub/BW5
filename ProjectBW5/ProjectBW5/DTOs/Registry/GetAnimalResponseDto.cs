@@ -1,6 +1,6 @@
-﻿using ProjectBW5.DTOs.Artist;
+﻿using ProjectBW5.DTOs.Registry;
 
-namespace ProjectBW5.DTOs.Animal
+namespace ProjectBW5.DTOs.Registry
 {
     public class GetAnimalResponseDto
     {

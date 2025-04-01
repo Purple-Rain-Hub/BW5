@@ -7,24 +7,12 @@
       "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\vetservices\\examsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\dtos\\examination\\getexamrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\dtos\\examination\\getexamrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\controllers\\vetcontrollers\\examscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\controllers\\vetcontrollers\\examscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\dtos\\examination\\createexamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\dtos\\examination\\createexamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\services\\vetservices\\hospitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\vetservices\\hospitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\services\\vetservices\\registryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\vetservices\\registryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\controllers\\vetcontrollers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\controllers\\vetcontrollers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,28 +26,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetExamRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Examination\\GetExamRequestDto.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\DTOs\\Examination\\GetExamRequestDto.cs",
-              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Examination\\GetExamRequestDto.cs",
-              "RelativeToolTip": "ProjectBW5\\DTOs\\Examination\\GetExamRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RegistryService.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\RegistryService.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\RegistryService.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\RegistryService.cs",
+              "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\RegistryService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T17:55:55.437Z",
+              "WhenOpened": "2025-04-01T11:27:39.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateExamDto.cs",
-              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Examination\\CreateExamDto.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\DTOs\\Examination\\CreateExamDto.cs",
-              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Examination\\CreateExamDto.cs",
-              "RelativeToolTip": "ProjectBW5\\DTOs\\Examination\\CreateExamDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "HospitalService.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\HospitalService.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\HospitalService.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\HospitalService.cs",
+              "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\HospitalService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T17:50:55.736Z",
+              "WhenOpened": "2025-04-01T11:20:23.552Z",
               "EditorCaption": ""
             },
             {
@@ -70,48 +58,9 @@
               "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\ExamsService.cs",
               "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\ExamsService.cs",
               "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\ExamsService.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAADwv4MAAABqAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAnwE0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T17:24:11.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ExamsController.cs",
-              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\VetControllers\\ExamsController.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Controllers\\VetControllers\\ExamsController.cs",
-              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\VetControllers\\ExamsController.cs",
-              "RelativeToolTip": "ProjectBW5\\Controllers\\VetControllers\\ExamsController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwFgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T17:22:55.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegistryService.cs",
-              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\RegistryService.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\RegistryService.cs",
-              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\RegistryService.cs",
-              "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\RegistryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:51:48.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegistryController.cs",
-              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\VetControllers\\RegistryController.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Controllers\\VetControllers\\RegistryController.cs",
-              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\VetControllers\\RegistryController.cs",
-              "RelativeToolTip": "ProjectBW5\\Controllers\\VetControllers\\RegistryController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowCkAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T14:48:48.278Z",
+              "WhenOpened": "2025-04-01T11:16:43.974Z",
               "EditorCaption": ""
             }
           ]

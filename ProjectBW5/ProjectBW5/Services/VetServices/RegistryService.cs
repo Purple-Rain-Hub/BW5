@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjectBW5.Data;
-using ProjectBW5.DTOs.Artist;
 using ProjectBW5.DTOs.Registry;
 using ProjectBW5.Models;
 

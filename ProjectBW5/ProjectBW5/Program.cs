@@ -73,6 +73,7 @@ builder.Services.AddScoped<RoleManager<ApplicationRole>>();
 builder.Services.AddScoped<AccountService>();
 builder.Services.AddScoped<RegistryService>();
 builder.Services.AddScoped<ExamsService>();
+builder.Services.AddScoped<HospitalService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

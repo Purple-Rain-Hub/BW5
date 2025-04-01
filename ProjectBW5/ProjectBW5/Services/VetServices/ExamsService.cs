@@ -26,10 +26,37 @@ namespace ProjectBW5.Services.VetServices
             }
         }
 
+        public async Task<bool> CheckDate(Guid id, DateTime startDate)
+        {
+            try
+            {
+                var animal = await _context.Animals.FirstOrDefaultAsync(s => s.Id == id);
+                if(animal == null)
+                {
+                    return false;
+                }
+                DateTime animalDate = animal.BirthDate.ToDateTime(TimeOnly.MinValue);
+                if (animalDate > startDate)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public async Task<bool> CreateExamAsync(Guid id, CreateExamDto createExam)
         {
             try
             {
+                var IsValid = await CheckDate(id, createExam.ExamDate);
+                if (!IsValid)
+                {
+                    return false;
+                }
                 var exam = new Examination()
                 {
                     ExamDate = createExam.ExamDate,
@@ -52,8 +79,12 @@ namespace ProjectBW5.Services.VetServices
             try
             {
                 var existingExam = await _context.Examinations.FirstOrDefaultAsync(a => a.Id == id);
-
                 if (existingExam == null)
+                {
+                    return false;
+                }
+                var IsValid = await CheckDate(existingExam.AnimalId, updateExam.ExamDate);
+                if (!IsValid)
                 {
                     return false;
                 }
@@ -61,7 +92,6 @@ namespace ProjectBW5.Services.VetServices
                 existingExam.ExamDate = updateExam.ExamDate;
                 existingExam.ExamObjective = updateExam.ExamObjective;
                 existingExam.ExamTreatment = updateExam.ExamTreatment;
-                existingExam.AnimalId = id;
                 existingExam.VetId = updateExam.VetId;
 
                 return await SaveAsync();
