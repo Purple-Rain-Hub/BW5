@@ -28,24 +28,24 @@ namespace ProjectBW5.Controllers
         {
             var medicine = await _medicineService.GetByIdAsync(id);
             if (medicine == null)
-                return NotFound();
+                return NotFound("Medicine not found.");
 
             return Ok(medicine);
         }
 
         [HttpPost]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Pharmacist,Admin")]
         public async Task<ActionResult> Create([FromBody] MedicineCreateDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             await _medicineService.AddAsync(dto);
-            return CreatedAtAction(nameof(GetAll), null);
+            return Ok("Medicine created successfully.");
         }
 
         [HttpPut]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Pharmacist,Admin")]
         public async Task<ActionResult> Update([FromBody] MedicineUpdateDto dto)
         {
             if (!ModelState.IsValid)
@@ -53,20 +53,20 @@ namespace ProjectBW5.Controllers
 
             var result = await _medicineService.UpdateAsync(dto);
             if (!result)
-                return NotFound();
+                return NotFound("Medicine not found.");
 
-            return NoContent();
+            return Ok("Medicine updated successfully. (Name, Company and Usage cannot be modified)");
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Farmacista,Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(Guid id)
         {
             var result = await _medicineService.DeleteAsync(id);
             if (!result)
-                return NotFound();
+                return NotFound("Medicine not found.");
 
-            return NoContent();
+            return Ok("Medicine deleted successfully.");
         }
     }
 }

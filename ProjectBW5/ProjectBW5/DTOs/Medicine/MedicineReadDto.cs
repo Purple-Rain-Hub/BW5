@@ -8,5 +8,7 @@
         public string UsageList { get; set; }
         public string StorageLocationId { get; set; }
         public bool RequiresPrescription { get; set; }
+        public decimal Price { get; set; }
+        public bool IsAvailable { get; set; }
     }
 }

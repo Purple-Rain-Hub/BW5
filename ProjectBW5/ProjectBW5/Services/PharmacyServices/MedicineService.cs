@@ -24,7 +24,9 @@ namespace ProjectBW5.Services
                     SupplierCompany = m.SupplierCompany,
                     UsageList = m.UsageList,
                     StorageLocationId = m.StorageLocationId,
-                    RequiresPrescription = m.RequiresPrescription
+                    RequiresPrescription = m.RequiresPrescription,
+                    Price = m.Price,
+                    IsAvailable = m.IsAvailable
                 })
                 .ToListAsync();
         }
@@ -41,7 +43,9 @@ namespace ProjectBW5.Services
                 SupplierCompany = medicine.SupplierCompany,
                 UsageList = medicine.UsageList,
                 StorageLocationId = medicine.StorageLocationId,
-                RequiresPrescription = medicine.RequiresPrescription
+                RequiresPrescription = medicine.RequiresPrescription,
+                Price = medicine.Price,
+                IsAvailable = medicine.IsAvailable
             };
         }
 
@@ -54,7 +58,9 @@ namespace ProjectBW5.Services
                 SupplierCompany = dto.SupplierCompany,
                 UsageList = dto.UsageList,
                 StorageLocationId = dto.StorageLocationId,
-                RequiresPrescription = dto.RequiresPrescription
+                RequiresPrescription = dto.RequiresPrescription,
+                Price = dto.Price,
+                IsAvailable = dto.IsAvailable
             };
 
             _context.Medicines.Add(medicine);
@@ -66,11 +72,10 @@ namespace ProjectBW5.Services
             var medicine = await _context.Medicines.FindAsync(dto.Id);
             if (medicine == null) return false;
 
-            medicine.Name = dto.Name;
-            medicine.SupplierCompany = dto.SupplierCompany;
-            medicine.UsageList = dto.UsageList;
             medicine.StorageLocationId = dto.StorageLocationId;
             medicine.RequiresPrescription = dto.RequiresPrescription;
+            medicine.Price = dto.Price;
+            medicine.IsAvailable = dto.IsAvailable;
 
             await _context.SaveChangesAsync();
             return true;
