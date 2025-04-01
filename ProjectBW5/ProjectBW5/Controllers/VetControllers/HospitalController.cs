@@ -93,7 +93,7 @@ namespace ProjectBW5.Controllers.VetControllers
 
                 var count = hospitals.Count();
 
-                var text = count == 1 ? $"{count} animal found" : $"{count} animals found";
+                var text = count == 1 ? $"{count} hospital found" : $"{count} hospitals found";
 
                 return Ok(new
                 GetHospitalResponseDto()
@@ -115,7 +115,7 @@ namespace ProjectBW5.Controllers.VetControllers
             {
                 var result = await _hospitalService.GetHospitalByIdAsync(id);
 
-                return result != null ? Ok(new { message = "animal found", Hospital = result })
+                return result != null ? Ok(new { message = "hospital found", Hospital = result })
                     : BadRequest(new { message = "Something went wrong" });
             }
             catch (Exception ex)
@@ -133,6 +133,38 @@ namespace ProjectBW5.Controllers.VetControllers
 
                 return result ? Ok(new UpdateHospitalResponseDto() { Message = "Hospital info updated" })
                     : BadRequest(new UpdateHospitalResponseDto() { Message = "Something went wrong or end date is invalid" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet("Animal/Hospitals/{id:guid}")]
+
+        public async Task<IActionResult> GetAnimalHospitals(Guid id)
+        {
+            try
+            {
+                var hospitals = await _hospitalService.GetAnimalHospitalsAsync(id);
+
+                if (hospitals == null)
+                {
+                    return BadRequest(new
+                    {
+                        message = "Something went wrong"
+                    });
+                }
+
+                var count = hospitals.Count();
+
+                var text = count == 1 ? $"{count} hospital found" : $"{count} hospitals found";
+
+                return Ok(new
+                GetHospitalResponseDto()
+                {
+                    Message = text,
+                    Hospitals = hospitals
+                });
             }
             catch (Exception ex)
             {

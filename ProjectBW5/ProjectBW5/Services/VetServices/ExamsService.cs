@@ -125,8 +125,11 @@ namespace ProjectBW5.Services.VetServices
         {
             try
             {
-                var exams = await _context.Examinations.Include(e=> e.Animal).Include(e=> e.User).ToListAsync();
-
+                var exams = await _context.Examinations.Include(e=> e.Animal).Include(e=> e.User).OrderByDescending(e=> e.ExamDate).ToListAsync();
+                if (exams == null)
+                {
+                    return null;
+                }
                 var examsRequest = new List<GetExamRequestDto>();
 
                 foreach (var exam in exams)
@@ -181,6 +184,43 @@ namespace ProjectBW5.Services.VetServices
                 };
 
                 return exam;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public async Task<List<GetExamRequestDto>?> GetAnimalExamsAsync(Guid id)
+        {
+            try
+            {
+                var exams = await _context.Examinations.Where(e => e.AnimalId == id).Include(e => e.Animal).Include(e => e.User).OrderByDescending(e => e.ExamDate).ToListAsync();
+                if (exams == null)
+                {
+                    return null;
+                }
+                var examsRequest = new List<GetExamRequestDto>();
+
+                foreach (var exam in exams)
+                {
+                    var request = new GetExamRequestDto()
+                    {
+                        Id = exam.Id,
+                        ExamDate = exam.ExamDate,
+                        ExamObjective = exam.ExamObjective,
+                        ExamTreatment = exam.ExamTreatment,
+                        AnimalId = exam.AnimalId,
+                        AnimalName = exam.Animal.Name,
+                        OwnerName = exam.Animal.OwnerName,
+                        OwnerSurname = exam.Animal.OwnerSurname,
+                        VetId = exam.VetId,
+                        VetName = exam.User.Email
+                    };
+
+                    examsRequest.Add(request);
+                }
+
+                return examsRequest;
             }
             catch
             {

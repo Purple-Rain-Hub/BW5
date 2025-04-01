@@ -116,5 +116,37 @@ namespace ProjectBW5.Controllers.VetControllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpGet("Animal/Exams/{id:guid}")]
+        public async Task<IActionResult> GetAnimalExams(Guid id)
+        {
+            try
+            {
+                var exams = await _examsService.GetAnimalExamsAsync(id);
+
+                if (exams == null)
+                {
+                    return BadRequest(new
+                    {
+                        message = "Something went wrong"
+                    });
+                }
+
+                var count = exams.Count();
+
+                var text = count == 1 ? $"{count} exam found" : $"{count} exams found";
+
+                return Ok(new
+                GetExamResponseDto()
+                {
+                    Message = text,
+                    Exams = exams
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

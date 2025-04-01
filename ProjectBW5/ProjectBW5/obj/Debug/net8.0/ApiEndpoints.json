@@ -126,6 +126,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.ExamsController",
+    "Method": "GetAnimalExams",
+    "RelativePath": "api/Exams/Animal/Exams/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
     "Method": "CreateHospital",
     "RelativePath": "api/Hospital",
@@ -197,6 +213,22 @@
     "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
     "Method": "GetHospitalById",
     "RelativePath": "api/Hospital/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.VetControllers.HospitalController",
+    "Method": "GetAnimalHospitals",
+    "RelativePath": "api/Hospital/Animal/Hospitals/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

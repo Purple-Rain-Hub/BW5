@@ -129,8 +129,11 @@ namespace ProjectBW5.Services.VetServices
         {
             try
             {
-                var hospitals = await _context.Hospitalizations.Include(h=> h.Animal).Include(h=> h.User).ToListAsync();
-
+                var hospitals = await _context.Hospitalizations.Include(h=> h.Animal).Include(h=> h.User).OrderByDescending(h=> h.EndDate).ToListAsync();
+                if (hospitals == null)
+                {
+                    return null;
+                }
                 var hospitalsRequest = new List<GetHospitalRequestDto>();
 
                 foreach (var hospital in hospitals)
@@ -164,7 +167,7 @@ namespace ProjectBW5.Services.VetServices
         {
             try
             {
-                var existingHospital = await _context.Hospitalizations.FirstOrDefaultAsync(s => s.Id == id);
+                var existingHospital = await _context.Hospitalizations.FirstOrDefaultAsync(e => e.Id == id);
 
                 if (existingHospital == null)
                 {
@@ -215,6 +218,44 @@ namespace ProjectBW5.Services.VetServices
             catch
             {
                 return false;
+            }
+        }
+        public async Task<List<GetHospitalRequestDto>?> GetAnimalHospitalsAsync(Guid id)
+        {
+            try
+            {
+                var hospitals = await _context.Hospitalizations.Where(h=> h.AnimalId == id).Include(h => h.Animal).Include(h => h.User).OrderByDescending(h => h.EndDate).ToListAsync();
+                if (hospitals == null)
+                {
+                    return null;
+                }
+                var hospitalsRequest = new List<GetHospitalRequestDto>();
+
+                foreach (var hospital in hospitals)
+                {
+                    var request = new GetHospitalRequestDto()
+                    {
+                        Id = hospital.Id,
+                        AnimalId = hospital.AnimalId,
+                        AnimalName = hospital.Animal.Name,
+                        StartDate = hospital.StartDate,
+                        EndDate = hospital.EndDate,
+                        HospitalObjective = hospital.HospitalObjective,
+                        HospitalTreatment = hospital.HospitalTreatment,
+                        OwnerName = hospital.Animal.OwnerName,
+                        OwnerSurname = hospital.Animal.OwnerSurname,
+                        VetId = hospital.VetId,
+                        VetName = hospital.User.Email
+                    };
+
+                    hospitalsRequest.Add(request);
+                }
+
+                return hospitalsRequest;
+            }
+            catch
+            {
+                return null;
             }
         }
     }
