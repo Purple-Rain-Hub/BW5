@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectBW5.Data;
 
@@ -11,9 +12,11 @@ using ProjectBW5.Data;
 namespace ProjectBW5.Migrations
 {
     [DbContext(typeof(BW5DbContext))]
-    partial class BW5DbContextModelSnapshot : ModelSnapshot
+    [Migration("20250401134203_UpdateTabs")]
+    partial class UpdateTabs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,60 +114,6 @@ namespace ProjectBW5.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("ProjectBW5.Models.Animal", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateOnly>("BirthDate")
-                        .HasColumnType("date");
-
-                    b.Property<string>("CoatColor")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<bool>("HasMicrochip")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("MicrochipNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("OwnerName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("OwnerSurname")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime>("RegistrationDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MicrochipNumber")
-                        .IsUnique()
-                        .HasFilter("[MicrochipNumber] IS NOT NULL");
-
-                    b.ToTable("Animals");
                 });
 
             modelBuilder.Entity("ProjectBW5.Models.ApplicationRole", b =>
@@ -288,132 +237,6 @@ namespace ProjectBW5.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
-                });
-
-            modelBuilder.Entity("ProjectBW5.Models.Examination", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("AnimalId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("ExamDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ExamObjective")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("ExamTreatment")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("VetId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AnimalId");
-
-                    b.HasIndex("VetId");
-
-                    b.ToTable("Examinations");
-                });
-
-            modelBuilder.Entity("ProjectBW5.Models.Hospitalization", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("AnimalId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("HospitalObjective")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("HospitalTreatment")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("VetId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AnimalId");
-
-                    b.HasIndex("VetId");
-
-                    b.ToTable("Hospitalizations");
-                });
-
-            modelBuilder.Entity("ProjectBW5.Models.StrayHospital", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CoatColor")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("HasMicrochip")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("MicrochipNumber")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("RegistrationDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("VetId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MicrochipNumber")
-                        .IsUnique()
-                        .HasFilter("[MicrochipNumber] IS NOT NULL");
-
-                    b.HasIndex("VetId");
-
-                    b.ToTable("StrayHospitals");
                 });
 
             modelBuilder.Entity("ProjectBW5.Models.Medicine", b =>
@@ -563,62 +386,6 @@ namespace ProjectBW5.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ProjectBW5.Models.Examination", b =>
-                {
-                    b.HasOne("ProjectBW5.Models.Animal", "Animal")
-                        .WithMany("Examinations")
-                        .HasForeignKey("AnimalId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ProjectBW5.Models.ApplicationUser", "User")
-                        .WithMany("Examinations")
-                        .HasForeignKey("VetId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Animal");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("ProjectBW5.Models.Hospitalization", b =>
-                {
-                    b.HasOne("ProjectBW5.Models.Animal", "Animal")
-                        .WithMany("Hospitalizations")
-                        .HasForeignKey("AnimalId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ProjectBW5.Models.ApplicationUser", "User")
-                        .WithMany("Hospitalizations")
-                        .HasForeignKey("VetId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Animal");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("ProjectBW5.Models.StrayHospital", b =>
-                {
-                    b.HasOne("ProjectBW5.Models.ApplicationUser", "User")
-                        .WithMany("StrayHospitals")
-                        .HasForeignKey("VetId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("ProjectBW5.Models.Animal", b =>
-                {
-                    b.Navigation("Examinations");
-
-                    b.Navigation("Hospitalizations");
-                });
-
             modelBuilder.Entity("ProjectBW5.Models.Receipt", b =>
                 {
                     b.HasOne("ProjectBW5.Models.Medicine", "Medicine")
@@ -654,12 +421,6 @@ namespace ProjectBW5.Migrations
             modelBuilder.Entity("ProjectBW5.Models.ApplicationUser", b =>
                 {
                     b.Navigation("ApplicationUserRoles");
-
-                    b.Navigation("Examinations");
-
-                    b.Navigation("Hospitalizations");
-
-                    b.Navigation("StrayHospitals");
                 });
 
             modelBuilder.Entity("ProjectBW5.Models.Medicine", b =>

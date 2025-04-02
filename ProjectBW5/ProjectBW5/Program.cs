@@ -76,6 +76,11 @@ builder.Services.AddScoped<ExamsService>();
 builder.Services.AddScoped<HospitalService>();
 builder.Services.AddScoped<StrayHospitalService>();
 
+// Pharmacy Services
+builder.Services.AddScoped<MedicineService>();
+builder.Services.AddScoped<SaleService>();
+builder.Services.AddScoped<ReceiptService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
