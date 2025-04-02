@@ -126,5 +126,61 @@ namespace ProjectBW5.Services
 
             return totalAmount;
         }
+
+        public async Task<List<MedicineSoldDto>> GetMedicinesSoldOnDateAsync(DateTime date)
+        {
+            var startDate = date.Date;
+            var endDate = startDate.AddDays(1);
+
+            return await _context.Receipts
+                .Include(r => r.Medicine)
+                .Where(r => r.Timestamp >= startDate && r.Timestamp < endDate)
+                .Select(r => new MedicineSoldDto
+                {
+                    MedicineId = r.MedicineId,
+                    MedicineName = r.Medicine.Name,
+                    Quantity = r.Quantity,
+                    Timestamp = r.Timestamp
+                })
+                .ToListAsync();
+        }
+
+        public async Task<List<MedicineSoldDto>> GetMedicinesSoldByCustomerAsync(string fiscalCode)
+        {
+            return await _context.Receipts
+                .Include(r => r.Medicine)
+                .Include(r => r.Sale)
+                .Where(r => r.Sale.CustomerFiscalCode == fiscalCode)
+                .Select(r => new MedicineSoldDto
+                {
+                    MedicineId = r.MedicineId,
+                    MedicineName = r.Medicine.Name,
+                    Quantity = r.Quantity,
+                    Timestamp = r.Timestamp,
+                    CustomerFiscalCode = r.Sale.CustomerFiscalCode
+                })
+                .ToListAsync();
+        }
+
+        public async Task<List<MedicineSoldDto>> GetMedicinesSoldByUserAsync(string userId)
+        {
+            return await _context.Receipts
+                .Include(r => r.Medicine)
+                .Include(r => r.Sale)
+                .Include(r => r.User)
+                .Where(r => r.UserId == userId)
+                .Select(r => new MedicineSoldDto
+                {
+                    MedicineId = r.MedicineId,
+                    MedicineName = r.Medicine.Name,
+                    Quantity = r.Quantity,
+                    Timestamp = r.Timestamp,
+                    CustomerFiscalCode = r.Sale.CustomerFiscalCode,
+                    UserId = r.UserId,
+                    UserEmail = r.User.Email
+                })
+                .ToListAsync();
+        }
+
     }
 }
