@@ -68,5 +68,29 @@ namespace ProjectBW5.Controllers
 
             return Ok("Medicine deleted successfully.");
         }
+
+        [HttpGet("location/{id:guid}")]
+        [Authorize(Roles = "Pharmacist,Admin")]
+        public async Task<ActionResult<MedicineLocationDto>> GetLocation(Guid id)
+        {
+            var result = await _medicineService.GetLocationAsync(id);
+            if (result == null)
+                return NotFound("Medicine not found.");
+
+            return Ok(result);
+        }
+
+        [HttpGet("search")]
+        [Authorize(Roles = "Pharmacist,Admin")]
+        public async Task<ActionResult<List<MedicineReadDto>>> Search(
+            [FromQuery] string? name,
+            [FromQuery] string? supplierCompany,
+            [FromQuery] string? usageList)
+        {
+            var results = await _medicineService.SearchAsync(name, supplierCompany, usageList);
+            return Ok(results);
+        }
+
+
     }
 }

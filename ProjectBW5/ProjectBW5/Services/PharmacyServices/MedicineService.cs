@@ -90,5 +90,50 @@ namespace ProjectBW5.Services
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<MedicineLocationDto?> GetLocationAsync(Guid medicineId)
+        {
+            var medicine = await _context.Medicines
+                .Where(m => m.Id == medicineId)
+                .Select(m => new MedicineLocationDto
+                {
+                    MedicineId = m.Id,
+                    Name = m.Name,
+                    StorageLocationId = m.StorageLocationId
+                })
+                .FirstOrDefaultAsync();
+
+            return medicine;
+        }
+
+        public async Task<List<MedicineReadDto>> SearchAsync(string? name, string? supplierCompany, string? usageList)
+        {
+            var query = _context.Medicines.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(name))
+                query = query.Where(m => m.Name.Contains(name));
+
+            if (!string.IsNullOrWhiteSpace(supplierCompany))
+                query = query.Where(m => m.SupplierCompany.Contains(supplierCompany));
+
+            if (!string.IsNullOrWhiteSpace(usageList))
+                query = query.Where(m => m.UsageList.Contains(usageList));
+
+            return await query
+                .Select(m => new MedicineReadDto
+                {
+                    Id = m.Id,
+                    Name = m.Name,
+                    SupplierCompany = m.SupplierCompany,
+                    UsageList = m.UsageList,
+                    StorageLocationId = m.StorageLocationId,
+                    RequiresPrescription = m.RequiresPrescription,
+                    Price = m.Price,
+                    IsAvailable = m.IsAvailable
+                })
+                .ToListAsync();
+        }
+
+
     }
 }
