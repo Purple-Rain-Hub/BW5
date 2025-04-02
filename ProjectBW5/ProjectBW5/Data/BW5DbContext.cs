@@ -55,11 +55,9 @@ namespace ProjectBW5.Data
 
             modelBuilder.Entity<Animal>().HasIndex(a => a.MicrochipNumber).IsUnique();
 
-            modelBuilder.Entity<StrayHospital>().Property(s => s.RegistrationDate).HasDefaultValueSql("GETDATE()").IsRequired(true);
-
             modelBuilder.Entity<StrayHospital>().HasOne(s => s.User).WithMany(u => u.StrayHospitals).HasForeignKey(s => s.VetId);
 
-            modelBuilder.Entity<StrayHospital>().HasIndex(s => s.MicrochipNumber).IsUnique();
+            modelBuilder.Entity<StrayHospital>().HasOne(s => s.Animal).WithOne(a => a.StrayHospital).HasForeignKey<StrayHospital>(s=> s.AnimalId);
         }
     }
 }

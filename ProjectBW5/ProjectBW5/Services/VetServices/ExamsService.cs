@@ -31,12 +31,7 @@ namespace ProjectBW5.Services.VetServices
             try
             {
                 var animal = await _context.Animals.FirstOrDefaultAsync(s => s.Id == id);
-                if(animal == null)
-                {
-                    return false;
-                }
-                DateTime animalDate = animal.BirthDate.ToDateTime(TimeOnly.MinValue);
-                if (animalDate > startDate)
+                if(animal == null || animal.BirthDate > startDate)
                 {
                     return false;
                 }

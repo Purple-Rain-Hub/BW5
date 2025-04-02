@@ -33,11 +33,7 @@ namespace ProjectBW5.Services.VetServices
                 {
                     StartDate = createStrayHospital.StartDate,
                     EndDate = createStrayHospital.EndDate,
-                    Type = createStrayHospital.Type,
-                    CoatColor = createStrayHospital.CoatColor,
-                    HasMicrochip = createStrayHospital.HasMicrochip,
-                    MicrochipNumber = createStrayHospital.MicrochipNumber,
-                    Description = createStrayHospital.Description,
+                    AnimalId = createStrayHospital.AnimalId,
                     VetId = createStrayHospital.VetId
                 };
 
@@ -62,11 +58,7 @@ namespace ProjectBW5.Services.VetServices
 
                 existingStrayHospital.StartDate = updateStrayHospital.StartDate;
                 existingStrayHospital.EndDate = updateStrayHospital.EndDate;
-                existingStrayHospital.Type = updateStrayHospital.Type;
-                existingStrayHospital.CoatColor = updateStrayHospital.CoatColor;
-                existingStrayHospital.HasMicrochip = updateStrayHospital.HasMicrochip;
-                existingStrayHospital.MicrochipNumber = updateStrayHospital.MicrochipNumber;
-                existingStrayHospital.Description = updateStrayHospital.Description;
+                existingStrayHospital.AnimalId = updateStrayHospital.AnimalId;
                 existingStrayHospital.VetId = updateStrayHospital.VetId;
 
                 return await SaveAsync();
@@ -100,7 +92,7 @@ namespace ProjectBW5.Services.VetServices
         {
             try
             {
-                var strayHospitals = await _context.StrayHospitals.Include(s=> s.User).OrderByDescending(s => s.EndDate).ToListAsync();
+                var strayHospitals = await _context.StrayHospitals.Include(s=> s.Animal).Include(s=> s.User).OrderByDescending(s => s.EndDate).ToListAsync();
                 if (strayHospitals == null)
                 {
                     return null;
@@ -112,14 +104,14 @@ namespace ProjectBW5.Services.VetServices
                     var request = new GetStrayHospitalRequestDto()
                     {
                         Id = strayHospital.Id,
-                        RegistrationDate = strayHospital.RegistrationDate,
-                        Type = strayHospital.Type,
+                        RegistrationDate = strayHospital.Animal.RegistrationDate,
+                        Type = strayHospital.Animal.Type,
                         StartDate = strayHospital.StartDate,
                         EndDate = strayHospital.EndDate,
-                        CoatColor = strayHospital.CoatColor,
-                        HasMicrochip = strayHospital.HasMicrochip,
-                        MicrochipNumber = strayHospital.MicrochipNumber,
-                        Description = strayHospital.Description,
+                        CoatColor = strayHospital.Animal.CoatColor,
+                        HasMicrochip = strayHospital.Animal.HasMicrochip,
+                        MicrochipNumber = strayHospital.Animal.MicrochipNumber,
+                        AnimalId = strayHospital.AnimalId,
                         VetId = strayHospital.VetId,
                         VetName = strayHospital.User.Email
                     };
@@ -138,7 +130,7 @@ namespace ProjectBW5.Services.VetServices
         {
             try
             {
-                var existingStrayHospital = await _context.StrayHospitals.Include(s=> s.User).FirstOrDefaultAsync(s => s.Id == id);
+                var existingStrayHospital = await _context.StrayHospitals.Include(s => s.Animal).Include(s=> s.User).FirstOrDefaultAsync(s => s.Id == id);
 
                 if (existingStrayHospital == null)
                 {
@@ -148,14 +140,14 @@ namespace ProjectBW5.Services.VetServices
                 var strayHospital = new GetStrayHospitalRequestDto()
                 {
                     Id = existingStrayHospital.Id,
-                    RegistrationDate = existingStrayHospital.RegistrationDate,
-                    Type = existingStrayHospital.Type,
+                    RegistrationDate = existingStrayHospital.Animal.RegistrationDate,
+                    Type = existingStrayHospital.Animal.Type,
                     StartDate = existingStrayHospital.StartDate,
                     EndDate = existingStrayHospital.EndDate,
-                    CoatColor = existingStrayHospital.CoatColor,
-                    HasMicrochip = existingStrayHospital.HasMicrochip,
-                    MicrochipNumber = existingStrayHospital.MicrochipNumber,
-                    Description = existingStrayHospital.Description,
+                    CoatColor = existingStrayHospital.Animal.CoatColor,
+                    HasMicrochip = existingStrayHospital.Animal.HasMicrochip,
+                    MicrochipNumber = existingStrayHospital.Animal.MicrochipNumber,
+                    AnimalId = existingStrayHospital.AnimalId,
                     VetId = existingStrayHospital.VetId,
                     VetName = existingStrayHospital.User.Email
                 };
@@ -171,7 +163,7 @@ namespace ProjectBW5.Services.VetServices
         {
             try
             {
-                var strayHospitals = await _context.StrayHospitals.Where(s=> s.EndDate == null).Include(s=> s.User).OrderByDescending(s=> s.StartDate).ToListAsync();
+                var strayHospitals = await _context.StrayHospitals.Where(s=> s.EndDate == null).Include(s=> s.Animal).Include(s=> s.User).OrderByDescending(s=> s.StartDate).ToListAsync();
                 if (strayHospitals == null)
                 {
                     return null;
@@ -183,14 +175,14 @@ namespace ProjectBW5.Services.VetServices
                     var request = new GetStrayHospitalRequestDto()
                     {
                         Id = strayHospital.Id,
-                        RegistrationDate = strayHospital.RegistrationDate,
-                        Type = strayHospital.Type,
+                        RegistrationDate = strayHospital.Animal.RegistrationDate,
+                        Type = strayHospital.Animal.Type,
                         StartDate = strayHospital.StartDate,
                         EndDate = strayHospital.EndDate,
-                        CoatColor = strayHospital.CoatColor,
-                        HasMicrochip = strayHospital.HasMicrochip,
-                        MicrochipNumber = strayHospital.MicrochipNumber,
-                        Description = strayHospital.Description,
+                        CoatColor = strayHospital.Animal.CoatColor,
+                        HasMicrochip = strayHospital.Animal.HasMicrochip,
+                        MicrochipNumber = strayHospital.Animal.MicrochipNumber,
+                        AnimalId = strayHospital.AnimalId,
                         VetId = strayHospital.VetId,
                         VetName = strayHospital.User.Email
                     };
@@ -209,7 +201,7 @@ namespace ProjectBW5.Services.VetServices
         {
             try
             {
-                var existingStrayHospital = await _context.StrayHospitals.Where(s=> s.EndDate == null).Include(s=> s.User).FirstOrDefaultAsync(s => s.MicrochipNumber == microchipNumber);
+                var existingStrayHospital = await _context.StrayHospitals.Where(s=> s.EndDate == null).Include(s=> s.Animal).Include(s=> s.User).FirstOrDefaultAsync(s => s.Animal.MicrochipNumber == microchipNumber);
 
                 if (existingStrayHospital == null)
                 {
@@ -218,10 +210,9 @@ namespace ProjectBW5.Services.VetServices
 
                 var strayHospital = new GetStrayHospitalByMicrochipRequestDto()
                 {
-                    Type = existingStrayHospital.Type,
+                    Type = existingStrayHospital.Animal.Type,
                     StartDate = existingStrayHospital.StartDate,
-                    CoatColor = existingStrayHospital.CoatColor,
-                    Description = existingStrayHospital.Description,
+                    CoatColor = existingStrayHospital.Animal.CoatColor,
                     VetName = existingStrayHospital.User.Email
                 };
 

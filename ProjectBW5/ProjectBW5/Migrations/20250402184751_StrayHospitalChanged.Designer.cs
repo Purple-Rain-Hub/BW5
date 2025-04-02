@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectBW5.Data;
 
@@ -11,9 +12,11 @@ using ProjectBW5.Data;
 namespace ProjectBW5.Migrations
 {
     [DbContext(typeof(BW5DbContext))]
-    partial class BW5DbContextModelSnapshot : ModelSnapshot
+    [Migration("20250402184751_StrayHospitalChanged")]
+    partial class StrayHospitalChanged
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

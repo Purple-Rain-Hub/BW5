@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Migrations\\20250402184751_StrayHospitalChanged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProjectBW5\\Migrations\\20250402184751_StrayHospitalChanged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\services\\vetservices\\examsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\vetservices\\examsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\services\\vetservices\\hospitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\vetservices\\hospitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\services\\vetservices\\strayhospitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\vetservices\\strayhospitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\services\\vetservices\\registryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\vetservices\\registryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\dtos\\registry\\createanimaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\dtos\\registry\\createanimaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\models\\strayhospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\models\\strayhospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\dtos\\strayhospital\\getstrayhospitalbymicrochiprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\dtos\\strayhospital\\getstrayhospitalbymicrochiprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\controllers\\vetcontrollers\\strayhospitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\controllers\\vetcontrollers\\strayhospitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\dtos\\strayhospital\\getstrayhospitalrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\dtos\\strayhospital\\getstrayhospitalrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\dtos\\registry\\getanimalrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\dtos\\registry\\getanimalrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +63,157 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StrayHospitalService.cs",
-              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\StrayHospitalService.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\StrayHospitalService.cs",
-              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\StrayHospitalService.cs*",
-              "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\StrayHospitalService.cs*",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAcwK4AAABDAAAAAAAAAA==",
+              "Title": "20250402184751_StrayHospitalChanged.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Migrations\\20250402184751_StrayHospitalChanged.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Migrations\\20250402184751_StrayHospitalChanged.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Migrations\\20250402184751_StrayHospitalChanged.cs",
+              "RelativeToolTip": "ProjectBW5\\Migrations\\20250402184751_StrayHospitalChanged.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T15:26:10.468Z",
+              "WhenOpened": "2025-04-02T18:47:51.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HospitalService.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\HospitalService.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\HospitalService.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\HospitalService.cs",
+              "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\HospitalService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:45:45.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetAnimalRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Registry\\GetAnimalRequestDto.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\DTOs\\Registry\\GetAnimalRequestDto.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Registry\\GetAnimalRequestDto.cs",
+              "RelativeToolTip": "ProjectBW5\\DTOs\\Registry\\GetAnimalRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:44:16.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateAnimalDto.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Registry\\CreateAnimalDto.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\DTOs\\Registry\\CreateAnimalDto.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Registry\\CreateAnimalDto.cs",
+              "RelativeToolTip": "ProjectBW5\\DTOs\\Registry\\CreateAnimalDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:42:59.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Animal.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Models\\Animal.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Animal.cs",
+              "RelativeToolTip": "ProjectBW5\\Models\\Animal.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:01:03.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ExamsService.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\ExamsService.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\ExamsService.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\ExamsService.cs",
+              "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\ExamsService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:00:47.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegistryService.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\RegistryService.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\RegistryService.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\RegistryService.cs",
+              "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\RegistryService.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAuwGkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T10:40:50.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StrayHospitalService.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\StrayHospitalService.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Services\\VetServices\\StrayHospitalService.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\VetServices\\StrayHospitalService.cs",
+              "RelativeToolTip": "ProjectBW5\\Services\\VetServices\\StrayHospitalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswOsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T10:52:08.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StrayHospital.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Models\\StrayHospital.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Models\\StrayHospital.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Models\\StrayHospital.cs",
+              "RelativeToolTip": "ProjectBW5\\Models\\StrayHospital.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:05:15.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "StrayHospitalController.cs",
               "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\VetControllers\\StrayHospitalController.cs",
               "RelativeDocumentMoniker": "ProjectBW5\\Controllers\\VetControllers\\StrayHospitalController.cs",
               "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\VetControllers\\StrayHospitalController.cs",
               "RelativeToolTip": "ProjectBW5\\Controllers\\VetControllers\\StrayHospitalController.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAuwK4AAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T15:22:33.026Z",
+              "WhenOpened": "2025-04-02T17:58:46.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetStrayHospitalByMicrochipRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\StrayHospital\\GetStrayHospitalByMicrochipRequestDto.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\DTOs\\StrayHospital\\GetStrayHospitalByMicrochipRequestDto.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\StrayHospital\\GetStrayHospitalByMicrochipRequestDto.cs",
+              "RelativeToolTip": "ProjectBW5\\DTOs\\StrayHospital\\GetStrayHospitalByMicrochipRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T17:48:33.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetStrayHospitalRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\StrayHospital\\GetStrayHospitalRequestDto.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\DTOs\\StrayHospital\\GetStrayHospitalRequestDto.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\StrayHospital\\GetStrayHospitalRequestDto.cs",
+              "RelativeToolTip": "ProjectBW5\\DTOs\\StrayHospital\\GetStrayHospitalRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T17:49:16.586Z",
               "EditorCaption": ""
             }
           ]
