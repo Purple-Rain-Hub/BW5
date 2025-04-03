@@ -607,6 +607,107 @@
         }
       }
     },
+    "/api/Medicine/location/{id}": {
+      "get": {
+        "tags": [
+          "Medicine"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MedicineLocationDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MedicineLocationDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MedicineLocationDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Medicine/search": {
+      "get": {
+        "tags": [
+          "Medicine"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "supplierCompany",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "usageList",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineReadDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineReadDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineReadDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Receipt": {
       "get": {
         "tags": [
@@ -796,6 +897,67 @@
         }
       }
     },
+<<<<<<< HEAD
+    "/api/Receipt/sold-on-date": {
+      "get": {
+        "tags": [
+          "Receipt"
+        ],
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Receipt/by-customer": {
+      "get": {
+        "tags": [
+          "Receipt"
+        ],
+        "parameters": [
+          {
+            "name": "fiscalCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+=======
     "/api/Registry": {
       "post": {
         "tags": [
@@ -889,11 +1051,56 @@
             "schema": {
               "type": "string",
               "format": "uuid"
+>>>>>>> develope
             }
           }
         ],
         "responses": {
           "200": {
+<<<<<<< HEAD
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Receipt/by-user": {
+      "get": {
+        "tags": [
+          "Receipt"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+=======
             "description": "OK"
           }
         }
@@ -910,12 +1117,43 @@
             "schema": {
               "type": "string",
               "format": "uuid"
+>>>>>>> develope
             }
           }
         ],
         "responses": {
           "200": {
+<<<<<<< HEAD
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              }
+            }
+=======
             "description": "OK"
+>>>>>>> develope
           }
         }
       }
@@ -1486,6 +1724,24 @@
         },
         "additionalProperties": false
       },
+      "MedicineLocationDto": {
+        "type": "object",
+        "properties": {
+          "medicineId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "storageLocationId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "MedicineReadDto": {
         "type": "object",
         "properties": {
@@ -1518,6 +1774,40 @@
           },
           "isAvailable": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MedicineSoldDto": {
+        "type": "object",
+        "properties": {
+          "medicineId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "medicineName": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customerFiscalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "userEmail": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

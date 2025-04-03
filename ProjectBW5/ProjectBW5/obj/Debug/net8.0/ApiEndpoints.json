@@ -367,6 +367,68 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ProjectBW5.Controllers.MedicineController",
+    "Method": "GetLocation",
+    "RelativePath": "api/Medicine/location/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProjectBW5.DTOs.Medicine.MedicineLocationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.MedicineController",
+    "Method": "Search",
+    "RelativePath": "api/Medicine/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "supplierCompany",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "usageList",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ProjectBW5.DTOs.Medicine.MedicineReadDto, ProjectBW5, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ProjectBW5.Controllers.ReceiptController",
     "Method": "GetAll",
     "RelativePath": "api/Receipt",
@@ -453,6 +515,84 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.ReceiptController",
+    "Method": "GetMedicinesByCustomer",
+    "RelativePath": "api/Receipt/by-customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fiscalCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ProjectBW5.DTOs.Receipt.MedicineSoldDto, ProjectBW5, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.ReceiptController",
+    "Method": "GetMedicinesByUser",
+    "RelativePath": "api/Receipt/by-user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ProjectBW5.DTOs.Receipt.MedicineSoldDto, ProjectBW5, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProjectBW5.Controllers.ReceiptController",
+    "Method": "GetMedicinesSoldOnDate",
+    "RelativePath": "api/Receipt/sold-on-date",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ProjectBW5.DTOs.Receipt.MedicineSoldDto, ProjectBW5, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "ProjectBW5.Controllers.ReceiptController",

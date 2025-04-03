@@ -70,5 +70,39 @@ namespace ProjectBW5.Controllers
             var total = await _receiptService.CalculateTotalSaleAmountAsync(saleId);
             return Ok(total);
         }
+
+        [HttpGet("sold-on-date")]
+        [Authorize(Roles = "Pharmacist,Admin")]
+        public async Task<ActionResult<List<MedicineSoldDto>>> GetMedicinesSoldOnDate([FromQuery] DateTime date)
+        {
+            var result = await _receiptService.GetMedicinesSoldOnDateAsync(date);
+            if (result == null || result.Count == 0)
+                return NotFound("No medicines were sold on the specified date.");
+
+            return Ok(result);
+        }
+
+        [HttpGet("by-customer")]
+        [Authorize(Roles = "Pharmacist,Admin")]
+        public async Task<ActionResult<List<MedicineSoldDto>>> GetMedicinesByCustomer([FromQuery] string fiscalCode)
+        {
+            var results = await _receiptService.GetMedicinesSoldByCustomerAsync(fiscalCode);
+            if (results == null || results.Count == 0)
+                return NotFound("No medicines found for the specified customer.");
+
+            return Ok(results);
+        }
+
+        [HttpGet("by-user")]
+        [Authorize(Roles = "Pharmacist,Admin")]
+        public async Task<ActionResult<List<MedicineSoldDto>>> GetMedicinesByUser([FromQuery] string userId)
+        {
+            var results = await _receiptService.GetMedicinesSoldByUserAsync(userId);
+            if (results == null || results.Count == 0)
+                return NotFound("No medicines found for the specified user.");
+
+            return Ok(results);
+        }
+
     }
 }
