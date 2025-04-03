@@ -160,7 +160,7 @@ namespace ProjectBW5.Services.VetServices
         {
             try
             {
-                var existingHospital = await _context.Hospitalizations.FirstOrDefaultAsync(e => e.Id == id);
+                var existingHospital = await _context.Hospitalizations.Include(h=> h.Animal).Include(h=> h.User).FirstOrDefaultAsync(e => e.Id == id);
 
                 if (existingHospital == null)
                 {

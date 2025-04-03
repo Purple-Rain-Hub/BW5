@@ -185,7 +185,7 @@ namespace ProjectBW5.Controllers.VetControllers
                 var result = await _strayHospitalService.GetStrayHospitalByMicrochipAsync(microchipNumber);
 
                 return result != null ? Ok(new { message = "stray hospital found", StrayHospital = result })
-                    : BadRequest(new { message = "Something went wrong" });
+                    : BadRequest(new { message = "Something went wrong or there's no animal with that number" });
             }
             catch (Exception ex)
             {
