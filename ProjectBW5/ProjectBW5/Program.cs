@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using ProjectBW5.Data;
 using ProjectBW5.Models;
 using ProjectBW5.Services;
+using ProjectBW5.Services.VetServices;
 using ProjectBW5.Settings;
 using System.Text;
 
@@ -69,10 +71,45 @@ builder.Services.AddScoped<SignInManager<ApplicationUser>>();
 builder.Services.AddScoped<RoleManager<ApplicationRole>>();
 
 builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<RegistryService>();
+builder.Services.AddScoped<ExamsService>();
+builder.Services.AddScoped<HospitalService>();
+builder.Services.AddScoped<StrayHospitalService>();
+
+// Pharmacy Services
+builder.Services.AddScoped<MedicineService>();
+builder.Services.AddScoped<SaleService>();
+builder.Services.AddScoped<ReceiptService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "CustomersManager API", Version = "v1" });
+
+    var securityScheme = new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Inserisci il token JWT nel formato: Bearer {token}",
+        Reference = new OpenApiReference
+        {
+            Type = ReferenceType.SecurityScheme,
+            Id = "Bearer"
+        }
+    };
+
+    c.AddSecurityDefinition("Bearer", securityScheme);
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+            { securityScheme, new string[] {} }
+            });
+});
 
 var app = builder.Build();
 
