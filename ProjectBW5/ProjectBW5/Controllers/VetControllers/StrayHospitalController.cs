@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProjectBW5.DTOs.StrayHospital;
 using ProjectBW5.Services.VetServices;
 
@@ -15,6 +16,7 @@ namespace ProjectBW5.Controllers.VetControllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin, Veterinary")]
         public async Task<IActionResult> CreateStrayHospital([FromBody] CreateStrayHospitalDto createStrayHospitalDto)
         {
             try
@@ -40,6 +42,7 @@ namespace ProjectBW5.Controllers.VetControllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin, Veterinary")]
         public async Task<IActionResult> UpdateStrayHospital([FromQuery] Guid id, [FromBody] CreateStrayHospitalDto updateStrayHospital)
         {
             try
@@ -60,6 +63,7 @@ namespace ProjectBW5.Controllers.VetControllers
         }
 
         [HttpDelete("{id:guid}")]
+        [Authorize(Roles = "Admin, Veterinary")]
         public async Task<IActionResult> DeleteStrayHospital(Guid id)
         {
             try
@@ -76,6 +80,7 @@ namespace ProjectBW5.Controllers.VetControllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, Veterinary")]
         public async Task<IActionResult> GetStrayHospitals()
         {
             try
@@ -108,6 +113,7 @@ namespace ProjectBW5.Controllers.VetControllers
         }
 
         [HttpGet("{id:guid}")]
+        [Authorize(Roles = "Admin, Veterinary")]
         public async Task<IActionResult> GetStrayHospitalById(Guid id)
         {
             try
@@ -124,6 +130,7 @@ namespace ProjectBW5.Controllers.VetControllers
         }
 
         [HttpPut("EndDate/{id:guid}")]
+        [Authorize(Roles = "Admin, Veterinary")]
         public async Task<IActionResult> EndStrayHospital(Guid id, [FromBody] DateTime endDate)
         {
             try
@@ -139,6 +146,7 @@ namespace ProjectBW5.Controllers.VetControllers
             }
         }
         [HttpGet("Active")]
+        [Authorize(Roles = "Admin, Veterinary")]
         public async Task<IActionResult> GetActiveStrayHospitals()
         {
             try

@@ -79,6 +79,18 @@
         }
       }
     },
+    "/api/Account/Users": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Exams": {
       "post": {
         "tags": [
@@ -1273,20 +1285,16 @@
     "schemas": {
       "CreateAnimalDto": {
         "required": [
-          "birthDate",
           "coatColor",
           "hasMicrochip",
-          "name",
-          "ownerName",
-          "ownerSurname",
           "type"
         ],
         "type": "object",
         "properties": {
           "name": {
             "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "type": {
             "maxLength": 100,
@@ -1300,7 +1308,8 @@
           },
           "birthDate": {
             "type": "string",
-            "format": "date"
+            "format": "date-time",
+            "nullable": true
           },
           "hasMicrochip": {
             "type": "boolean"
@@ -1312,13 +1321,13 @@
           },
           "ownerName": {
             "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "ownerSurname": {
             "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1390,37 +1399,15 @@
       },
       "CreateStrayHospitalDto": {
         "required": [
-          "coatColor",
-          "description",
-          "hasMicrochip",
+          "animalId",
           "startDate",
-          "type",
           "vetId"
         ],
         "type": "object",
         "properties": {
-          "type": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "coatColor": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "hasMicrochip": {
-            "type": "boolean"
-          },
-          "microchipNumber": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "description": {
-            "maxLength": 1000,
-            "minLength": 1,
-            "type": "string"
+          "animalId": {
+            "type": "string",
+            "format": "uuid"
           },
           "startDate": {
             "type": "string",

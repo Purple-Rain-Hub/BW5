@@ -16,6 +16,7 @@ namespace ProjectBW5.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class AccountController : ControllerBase
     {
         private readonly AccountService _accountService;
@@ -71,6 +72,7 @@ namespace ProjectBW5.Controllers
         }
 
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequest)
         {
             var (success, result) = await _accountService.LoginAsync(loginRequest);
@@ -82,6 +84,38 @@ namespace ProjectBW5.Controllers
             else
             {
                 return Unauthorized(new { message = result });
+            }
+        }
+
+        [HttpGet("Users")]
+        public async Task<IActionResult> GetUsers()
+        {
+            try
+            {
+                var users = await _accountService.GetUsersAsync();
+
+                if (users == null)
+                {
+                    return BadRequest(new
+                    {
+                        message = "Something went wrong"
+                    });
+                }
+
+                var count = users.Count();
+
+                var text = count == 1 ? $"{count} user found" : $"{count} users found";
+
+                return Ok(new
+                GetUserResponseDto()
+                {
+                    Message = text,
+                    Users = users
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
             }
         }
     }
