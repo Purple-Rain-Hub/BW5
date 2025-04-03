@@ -2,7 +2,6 @@
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -125,6 +124,36 @@ namespace ProjectBW5.Services
             catch
             {
                 return (false, "An error occurred while processing the request");
+            }
+        }
+
+        public async Task<List<UsersDto>> GetUsersAsync()
+        {
+            try
+            {
+                var users = await _userManager.Users.Include(u=> u.ApplicationUserRoles).ThenInclude(a=> a.Role).ToListAsync();
+
+                var usersRequest = new List<UsersDto>();
+
+                foreach (var user in users)
+                {
+                    var request = new UsersDto()
+                    {
+                        Id = user.Id,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Email = user.Email!,
+                        Role = user.ApplicationUserRoles.FirstOrDefault().Role.Name
+                    };
+
+                    usersRequest.Add(request);
+                }
+
+                return usersRequest;
+            }
+            catch
+            {
+                return null;
             }
         }
     }

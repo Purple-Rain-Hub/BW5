@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectBW5")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51d00c997d791f8c126a90317d4482280662f414")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0cee2d9c2420310a477d69eda2c1097022a2b56")]
+>>>>>>> develope
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectBW5")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectBW5")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

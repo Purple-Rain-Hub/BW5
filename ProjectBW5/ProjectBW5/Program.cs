@@ -6,6 +6,7 @@ using Microsoft.OpenApi.Models;
 using ProjectBW5.Data;
 using ProjectBW5.Models;
 using ProjectBW5.Services;
+using ProjectBW5.Services.VetServices;
 using ProjectBW5.Settings;
 using System.Text;
 
@@ -70,6 +71,10 @@ builder.Services.AddScoped<SignInManager<ApplicationUser>>();
 builder.Services.AddScoped<RoleManager<ApplicationRole>>();
 
 builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<RegistryService>();
+builder.Services.AddScoped<ExamsService>();
+builder.Services.AddScoped<HospitalService>();
+builder.Services.AddScoped<StrayHospitalService>();
 
 // Pharmacy Services
 builder.Services.AddScoped<MedicineService>();

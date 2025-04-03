@@ -113,6 +113,57 @@ namespace ProjectBW5.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ProjectBW5.Models.Animal", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CoatColor")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("HasMicrochip")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("MicrochipNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("OwnerName")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("OwnerSurname")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MicrochipNumber")
+                        .IsUnique()
+                        .HasFilter("[MicrochipNumber] IS NOT NULL");
+
+                    b.ToTable("Animals");
+                });
+
             modelBuilder.Entity("ProjectBW5.Models.ApplicationRole", b =>
                 {
                     b.Property<string>("Id")
@@ -236,6 +287,79 @@ namespace ProjectBW5.Migrations
                     b.ToTable("AspNetUserRoles", (string)null);
                 });
 
+            modelBuilder.Entity("ProjectBW5.Models.Examination", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AnimalId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ExamDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ExamObjective")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("ExamTreatment")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("VetId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AnimalId");
+
+                    b.HasIndex("VetId");
+
+                    b.ToTable("Examinations");
+                });
+
+            modelBuilder.Entity("ProjectBW5.Models.Hospitalization", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AnimalId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("HospitalObjective")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("HospitalTreatment")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("VetId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AnimalId");
+
+                    b.HasIndex("VetId");
+
+                    b.ToTable("Hospitalizations");
+                });
+
             modelBuilder.Entity("ProjectBW5.Models.Medicine", b =>
                 {
                     b.Property<Guid>("Id")
@@ -328,6 +452,35 @@ namespace ProjectBW5.Migrations
                     b.ToTable("Sales");
                 });
 
+            modelBuilder.Entity("ProjectBW5.Models.StrayHospital", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AnimalId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("VetId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AnimalId")
+                        .IsUnique();
+
+                    b.HasIndex("VetId");
+
+                    b.ToTable("StrayHospitals");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("ProjectBW5.Models.ApplicationRole", null)
@@ -383,6 +536,44 @@ namespace ProjectBW5.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ProjectBW5.Models.Examination", b =>
+                {
+                    b.HasOne("ProjectBW5.Models.Animal", "Animal")
+                        .WithMany("Examinations")
+                        .HasForeignKey("AnimalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectBW5.Models.ApplicationUser", "User")
+                        .WithMany("Examinations")
+                        .HasForeignKey("VetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Animal");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ProjectBW5.Models.Hospitalization", b =>
+                {
+                    b.HasOne("ProjectBW5.Models.Animal", "Animal")
+                        .WithMany("Hospitalizations")
+                        .HasForeignKey("AnimalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectBW5.Models.ApplicationUser", "User")
+                        .WithMany("Hospitalizations")
+                        .HasForeignKey("VetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Animal");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ProjectBW5.Models.Receipt", b =>
                 {
                     b.HasOne("ProjectBW5.Models.Medicine", "Medicine")
@@ -410,6 +601,34 @@ namespace ProjectBW5.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ProjectBW5.Models.StrayHospital", b =>
+                {
+                    b.HasOne("ProjectBW5.Models.Animal", "Animal")
+                        .WithOne("StrayHospital")
+                        .HasForeignKey("ProjectBW5.Models.StrayHospital", "AnimalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectBW5.Models.ApplicationUser", "User")
+                        .WithMany("StrayHospitals")
+                        .HasForeignKey("VetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Animal");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ProjectBW5.Models.Animal", b =>
+                {
+                    b.Navigation("Examinations");
+
+                    b.Navigation("Hospitalizations");
+
+                    b.Navigation("StrayHospital");
+                });
+
             modelBuilder.Entity("ProjectBW5.Models.ApplicationRole", b =>
                 {
                     b.Navigation("ApplicationUserRoles");
@@ -418,6 +637,12 @@ namespace ProjectBW5.Migrations
             modelBuilder.Entity("ProjectBW5.Models.ApplicationUser", b =>
                 {
                     b.Navigation("ApplicationUserRoles");
+
+                    b.Navigation("Examinations");
+
+                    b.Navigation("Hospitalizations");
+
+                    b.Navigation("StrayHospitals");
                 });
 
             modelBuilder.Entity("ProjectBW5.Models.Medicine", b =>
