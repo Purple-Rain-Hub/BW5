@@ -361,7 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/BuildWeek2-Be-Team7/appsettings.json
-/BuildWeek2-Be-Team7/appsettings.Development.json
-/BuildWeek2-Be-Team7/assets/images
+/ProjectBW5/ProjectBW5/appsettings.json
+/ProjectBW5/ProjectBW5/appsettings.Development.json
+/ProjectBW5/ProjectBW5/assets/images
 /ProjectBW5/.vs
