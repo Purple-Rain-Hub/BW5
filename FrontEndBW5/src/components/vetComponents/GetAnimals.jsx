@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 
 const GetAnimals = () => {
   const myToken =
@@ -25,9 +25,37 @@ const GetAnimals = () => {
     }
   };
 
+  const deleteAnimalAsync = async (id) => {
+    try {
+      const response = await fetch(
+        "https://localhost:7030/api/Registry/" + id,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: "Bearer " + myToken,
+          },
+        }
+      );
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const deleteAnimal = (id) => {
+    deleteAnimalAsync(id);
+  };
+
   useEffect(() => {
     getAnimals();
   }, []);
+
+  useEffect(() => {
+    getAnimals();
+  }, [animals]);
 
   return (
     <Container>
@@ -59,7 +87,17 @@ const GetAnimals = () => {
                   <td>
                     {a.ownerName} {a.ownerSurname}
                   </td>
-                  <td className="d-flex border-0"></td>
+                  <td className="d-flex border-0">
+                    <Button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        deleteAnimal(a.id);
+                      }}
+                    >
+                      Delete
+                    </Button>
+                  </td>
                 </tr>
               );
             })}
