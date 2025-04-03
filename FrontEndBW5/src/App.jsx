@@ -1,11 +1,18 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MyNavbar from "./components/MyNavbar";
+import AddAnimal from "./components/vetComponents/AddAnimal";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <MyNavbar/>
+      <BrowserRouter>
+        <MyNavbar />
+        <Routes>
+          <Route path="/Registry/Add" element={<AddAnimal />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

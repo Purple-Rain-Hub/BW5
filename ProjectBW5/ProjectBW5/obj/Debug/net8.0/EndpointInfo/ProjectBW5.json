@@ -897,7 +897,6 @@
         }
       }
     },
-<<<<<<< HEAD
     "/api/Receipt/sold-on-date": {
       "get": {
         "tags": [
@@ -957,7 +956,89 @@
             "in": "query",
             "schema": {
               "type": "string"
-=======
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Receipt/by-user": {
+      "get": {
+        "tags": [
+          "Receipt"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MedicineSoldDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Registry": {
       "post": {
         "tags": [
@@ -1051,56 +1132,11 @@
             "schema": {
               "type": "string",
               "format": "uuid"
->>>>>>> develope
             }
           }
         ],
         "responses": {
           "200": {
-<<<<<<< HEAD
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MedicineSoldDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MedicineSoldDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MedicineSoldDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Receipt/by-user": {
-      "get": {
-        "tags": [
-          "Receipt"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-=======
             "description": "OK"
           }
         }
@@ -1117,43 +1153,12 @@
             "schema": {
               "type": "string",
               "format": "uuid"
->>>>>>> develope
             }
           }
         ],
         "responses": {
           "200": {
-<<<<<<< HEAD
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MedicineSoldDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MedicineSoldDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MedicineSoldDto"
-                  }
-                }
-              }
-            }
-=======
             "description": "OK"
->>>>>>> develope
           }
         }
       }
