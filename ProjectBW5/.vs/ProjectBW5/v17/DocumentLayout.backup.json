@@ -36,12 +36,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Program.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Program.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Program.cs",
+              "RelativeToolTip": "ProjectBW5\\Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAF4AAAAFAAAAAAAAAA==",
+=======
               "Title": "AccountService.cs",
               "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "ProjectBW5\\Services\\AccountService.cs",
               "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\AccountService.cs*",
               "RelativeToolTip": "ProjectBW5\\Services\\AccountService.cs*",
               "ViewState": "AgIAAHQAAAAAAAAAAAAIwJEAAABTAAAAAAAAAA==",
+>>>>>>> 90c49a1e85c77d3758ff84f5bc4848ea8acd4dca
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T08:05:18.522Z",
               "EditorCaption": ""
