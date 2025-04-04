@@ -1,0 +1,106 @@
+{
+  "hash": "a19a03d9",
+  "configHash": "b8d23e6a",
+  "lockfileHash": "085cc120",
+  "browserHash": "cad1cc56",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "cfe76430",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "9a524377",
+      "needsInterop": false
+    },
+    "react-bootstrap/Container": {
+      "src": "../../node_modules/react-bootstrap/esm/Container.js",
+      "file": "react-bootstrap_Container.js",
+      "fileHash": "285f9610",
+      "needsInterop": false
+    },
+    "react-bootstrap/Nav": {
+      "src": "../../node_modules/react-bootstrap/esm/Nav.js",
+      "file": "react-bootstrap_Nav.js",
+      "fileHash": "4299e3f3",
+      "needsInterop": false
+    },
+    "react-bootstrap/Navbar": {
+      "src": "../../node_modules/react-bootstrap/esm/Navbar.js",
+      "file": "react-bootstrap_Navbar.js",
+      "fileHash": "84adc420",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "43597a85",
+      "needsInterop": true
+    },
+    "react-bootstrap": {
+      "src": "../../node_modules/react-bootstrap/esm/index.js",
+      "file": "react-bootstrap.js",
+      "fileHash": "72ae6354",
+      "needsInterop": false
+    },
+    "react-bootstrap/Card": {
+      "src": "../../node_modules/react-bootstrap/esm/Card.js",
+      "file": "react-bootstrap_Card.js",
+      "fileHash": "37be36fc",
+      "needsInterop": false
+    },
+    "react-bootstrap/ListGroup": {
+      "src": "../../node_modules/react-bootstrap/esm/ListGroup.js",
+      "file": "react-bootstrap_ListGroup.js",
+      "fileHash": "e23ecfe7",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-AVTJ2QYL": {
+      "file": "chunk-AVTJ2QYL.js"
+    },
+    "chunk-VCNW76FT": {
+      "file": "chunk-VCNW76FT.js"
+    },
+    "chunk-DXC6APJG": {
+      "file": "chunk-DXC6APJG.js"
+    },
+    "chunk-EZ5QF5T3": {
+      "file": "chunk-EZ5QF5T3.js"
+    },
+    "chunk-HYNCHTJA": {
+      "file": "chunk-HYNCHTJA.js"
+    },
+    "chunk-ISN5TG6K": {
+      "file": "chunk-ISN5TG6K.js"
+    },
+    "chunk-YDNCAC5P": {
+      "file": "chunk-YDNCAC5P.js"
+    },
+    "chunk-EXR4HF75": {
+      "file": "chunk-EXR4HF75.js"
+    },
+    "chunk-OOKP3HZJ": {
+      "file": "chunk-OOKP3HZJ.js"
+    },
+    "chunk-WZVU6G5Y": {
+      "file": "chunk-WZVU6G5Y.js"
+    },
+    "chunk-UKNEREV5": {
+      "file": "chunk-UKNEREV5.js"
+    },
+    "chunk-MQC4GN3F": {
+      "file": "chunk-MQC4GN3F.js"
+    },
+    "chunk-VTSRCESW": {
+      "file": "chunk-VTSRCESW.js"
+    },
+    "chunk-Q462PRL3": {
+      "file": "chunk-Q462PRL3.js"
+    }
+  }
+}
