@@ -15,18 +15,10 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e255fe4398b6c7c943a367a843af3d2b03a23a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ed33cbc610e07fc93d7fa3e06ba64b146e0ad74")]
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51d00c997d791f8c126a90317d4482280662f414")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0cee2d9c2420310a477d69eda2c1097022a2b56")]
->>>>>>> develope
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2343ae305803bf6143a2e26a73e63c06175249e6")]
->>>>>>> e1636a1a7e956358df839f513136f5b940d9e1c2
->>>>>>> Pharmacy
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d01bfb0be586698cc0f08be4ba255ce50225df43")]
+>>>>>>> FrontEndPharmacy
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectBW5")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectBW5")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

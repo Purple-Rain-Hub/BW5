@@ -4,28 +4,24 @@
   "Documents": [
     {
 <<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\controllers\\pharmacycontrollers\\receiptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\controllers\\pharmacycontrollers\\receiptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\services\\pharmacyservices\\receiptservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\pharmacyservices\\receiptservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\dtos\\receipt\\medicinesolddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\dtos\\receipt\\medicinesolddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\models\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\models\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\controllers\\vetcontrollers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\controllers\\vetcontrollers\\registrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 =======
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\controllers\\pharmacycontrollers\\medicinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\controllers\\pharmacycontrollers\\medicinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\dtos\\account\\usersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\dtos\\account\\usersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> develope
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\aless\\source\\repos\\purple-rain-hub\\bw5\\projectbw5\\projectbw5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> FrontEndPharmacy
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|c:\\users\\manue\\onedrive\\desktop\\epicode\\fs0924\\settimana 20\\bw5\\projectbw5\\projectbw5\\projectbw5.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F07B9AAB-9975-4CE6-B426-D09D7A944AA2}|ProjectBW5\\ProjectBW5.csproj|solutionrelative:projectbw5\\projectbw5.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,83 +31,91 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsersDto.cs",
-              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Account\\UsersDto.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\DTOs\\Account\\UsersDto.cs",
-              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Account\\UsersDto.cs*",
-              "RelativeToolTip": "ProjectBW5\\DTOs\\Account\\UsersDto.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:26:23.898Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
 <<<<<<< HEAD
-              "Title": "ReceiptController.cs",
-              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\PharmacyControllers\\ReceiptController.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Controllers\\PharmacyControllers\\ReceiptController.cs",
-              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\PharmacyControllers\\ReceiptController.cs",
-              "RelativeToolTip": "ProjectBW5\\Controllers\\PharmacyControllers\\ReceiptController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAwwF4AAAAAAAAAAAAAAA==",
+              "Title": "RegistryController.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\VetControllers\\RegistryController.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Controllers\\VetControllers\\RegistryController.cs",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\VetControllers\\RegistryController.cs",
+              "RelativeToolTip": "ProjectBW5\\Controllers\\VetControllers\\RegistryController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDIAAABqAAAAAAAAAA==",
+=======
+              "Title": "MedicineController.cs",
+              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\PharmacyControllers\\MedicineController.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Controllers\\PharmacyControllers\\MedicineController.cs",
+              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Controllers\\PharmacyControllers\\MedicineController.cs",
+              "RelativeToolTip": "ProjectBW5\\Controllers\\PharmacyControllers\\MedicineController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:50:08.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Receipt.cs",
-              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Receipt.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Models\\Receipt.cs",
-              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Models\\Receipt.cs",
-              "RelativeToolTip": "ProjectBW5\\Models\\Receipt.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:46:03.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MedicineSoldDto.cs",
-              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Receipt\\MedicineSoldDto.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\DTOs\\Receipt\\MedicineSoldDto.cs",
-              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\DTOs\\Receipt\\MedicineSoldDto.cs",
-              "RelativeToolTip": "ProjectBW5\\DTOs\\Receipt\\MedicineSoldDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:44:39.368Z",
+              "WhenOpened": "2025-04-03T14:13:07.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReceiptService.cs",
-              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Services\\PharmacyServices\\ReceiptService.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Services\\PharmacyServices\\ReceiptService.cs",
-              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Services\\PharmacyServices\\ReceiptService.cs",
-              "RelativeToolTip": "ProjectBW5\\Services\\PharmacyServices\\ReceiptService.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAUwLIAAAAmAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Program.cs",
+              "RelativeDocumentMoniker": "ProjectBW5\\Program.cs",
+              "ToolTip": "C:\\Users\\aless\\source\\repos\\Purple-Rain-Hub\\BW5\\ProjectBW5\\ProjectBW5\\Program.cs",
+              "RelativeToolTip": "ProjectBW5\\Program.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJIAAAAXAAAAAAAAAA==",
+>>>>>>> FrontEndPharmacy
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:42:50.497Z",
-=======
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "ProjectBW5\\Services\\AccountService.cs",
-              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\Services\\AccountService.cs*",
-              "RelativeToolTip": "ProjectBW5\\Services\\AccountService.cs*",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAIwJEAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:05:18.522Z",
->>>>>>> develope
+              "WhenOpened": "2025-04-04T10:07:21.829Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\appsettings.json",
+              "RelativeDocumentMoniker": "ProjectBW5\\appsettings.json",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\appsettings.json",
+              "RelativeToolTip": "ProjectBW5\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+<<<<<<< HEAD
+              "WhenOpened": "2025-04-03T13:48:07.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProjectBW5.http",
+              "DocumentMoniker": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\ProjectBW5.http",
+              "RelativeDocumentMoniker": "ProjectBW5\\ProjectBW5.http",
+              "ToolTip": "C:\\Users\\manue\\OneDrive\\Desktop\\EPICODE\\FS0924\\Settimana 20\\BW5\\ProjectBW5\\ProjectBW5\\ProjectBW5.http",
+              "RelativeToolTip": "ProjectBW5\\ProjectBW5.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-04-03T13:43:57.169Z"
+=======
+              "WhenOpened": "2025-04-03T11:10:41.828Z"
+>>>>>>> FrontEndPharmacy
             }
           ]
         }

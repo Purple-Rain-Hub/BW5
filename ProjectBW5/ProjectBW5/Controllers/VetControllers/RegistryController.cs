@@ -21,6 +21,10 @@ namespace ProjectBW5.Controllers.VeterinaryControllers
         {
             try
             {
+                if (!createAnimalDto.HasMicrochip && createAnimalDto.MicrochipNumber != null)
+                {
+                    return BadRequest(new { message = "Animal is already registered or something went wrong." });
+                }
                 var success = await _registryService.CreateAnimalAsync(createAnimalDto);
                 if (success)
                 {
@@ -42,6 +46,10 @@ namespace ProjectBW5.Controllers.VeterinaryControllers
         {
             try
             {
+                if (!updateAnimal.HasMicrochip && updateAnimal.MicrochipNumber != null)
+                {
+                    return BadRequest(new UpdateAnimalResponseDto() { Message = "Something went wrong" });
+                }
                 var result = await _registryService.UpdateAnimalAsync(id, updateAnimal);
 
                 return result ? Ok(new UpdateAnimalResponseDto() { Message = "Animal info updated" })
