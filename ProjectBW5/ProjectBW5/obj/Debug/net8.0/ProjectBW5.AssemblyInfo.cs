@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectBW5")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ed33cbc610e07fc93d7fa3e06ba64b146e0ad74")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d01bfb0be586698cc0f08be4ba255ce50225df43")]
+>>>>>>> FrontEndPharmacy
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectBW5")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectBW5")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
