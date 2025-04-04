@@ -12,6 +12,7 @@ const AddAnimal = () => {
     ownerName: "",
     ownerSurname: "",
   });
+  const [message, setMessage] = useState();
 
   const postAnimal = async (newAnimal) => {
     const myToken =
@@ -28,9 +29,11 @@ const AddAnimal = () => {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-      }
+        setMessage(data.message);
+      } else throw new Error();
     } catch (error) {
       console.error(error);
+      setMessage("error");
     }
   };
 
@@ -68,6 +71,7 @@ const AddAnimal = () => {
   return (
     <Container>
       <h1>Aggiungi nuovo animale</h1>
+      <span className="bg-warning rounded-1">{message}</span>
       <Form onSubmit={handleNewAnimal}>
         <Form.Label className="mt-2 fw-lighter">Name</Form.Label>
         <Form.Control

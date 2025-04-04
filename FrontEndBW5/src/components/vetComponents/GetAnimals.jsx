@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import { Button, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const GetAnimals = () => {
   const myToken =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBlbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUGFvbG8gQm9ub2xpcyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQ5NDM1NjI2LCJpc3MiOiJodHRwczovL3N0dWRlbnRBcGkuY29tIiwiYXVkIjoiaHR0cHM6Ly9zdHVkZW50QXBpLmNvbSJ9.4s_6fd508fkuhfAh6B_xno8U5zEGEeIVtMT3Xe5EAEA";
 
   const [animals, setAnimals] = useState();
+  const [message, setMessage] = useState();
+
+  const navigate = useNavigate();
+
   const getAnimals = async () => {
     try {
       const response = await fetch("https://localhost:7030/api/Registry", {
@@ -19,9 +24,10 @@ const GetAnimals = () => {
         const data = await response.json();
         console.log(data);
         setAnimals(data.animals);
-      }
+      } else throw new Error();
     } catch (error) {
       console.error(error);
+      setMessage("error");
     }
   };
 
@@ -39,9 +45,12 @@ const GetAnimals = () => {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
-      }
+        setMessage(data.message);
+        getAnimals();
+      } else throw new Error();
     } catch (error) {
       console.error(error);
+      setMessage("error");
     }
   };
 
@@ -53,13 +62,10 @@ const GetAnimals = () => {
     getAnimals();
   }, []);
 
-  useEffect(() => {
-    getAnimals();
-  }, [animals]);
-
   return (
     <Container>
       <h1>Animal's Registry</h1>
+      <span className="bg-warning rounded-1">{message}</span>
       {animals && (
         <table className="table table-bordered table-hover">
           <thead className="thead-dark ">
@@ -88,6 +94,20 @@ const GetAnimals = () => {
                     {a.ownerName} {a.ownerSurname}
                   </td>
                   <td className="d-flex border-0">
+                    <Button
+                      onClick={() => {
+                        navigate(`/Exams/${a.id}`);
+                      }}
+                    >
+                      Exams
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        navigate(`/Registry/Edit/${a.id}`);
+                      }}
+                    >
+                      Edit
+                    </Button>
                     <Button
                       type="button"
                       onClick={(e) => {
