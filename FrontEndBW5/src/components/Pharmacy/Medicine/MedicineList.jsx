@@ -1,60 +1,101 @@
-import { getAllMedicines, deleteMedicine, updateMedicine, addMedicine } from '../../../services/medicineService'
-import MedicineItem from './MedicineItem'
-import MedicineForm from './MedicineForm'
-import { useEffect, useState } from 'react'
+import {
+  getAllMedicines,
+  deleteMedicine,
+  updateMedicine,
+  addMedicine,
+  searchMedicines,
+} from "../../../services/medicineService";
+import MedicineItem from "./MedicineItem";
+import MedicineForm from "./MedicineForm";
+import { useEffect, useState } from "react";
 
 function MedicineList() {
-  const [medicines, setMedicines] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [editingMedicine, setEditingMedicine] = useState(null)
-  const [creating, setCreating] = useState(false)
+  const [medicines, setMedicines] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [editingMedicine, setEditingMedicine] = useState(null);
+  const [creating, setCreating] = useState(false);
+  const [search, setSearch] = useState("");
+  const [filterField, setFilterField] = useState("name");
 
   const fetchData = async () => {
-    const data = await getAllMedicines()
-    setMedicines(data)
-    setLoading(false)
-  }
+    const data = await getAllMedicines();
+    setMedicines(data);
+    setLoading(false);
+  };
 
   useEffect(() => {
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
   const handleDelete = async (id) => {
-    if (!window.confirm('Confermi eliminazione?')) return
-    const success = await deleteMedicine(id)
-    if (success) setMedicines(prev => prev.filter(m => m.id !== id))
-    else alert('Errore eliminazione')
-  }
+    if (!window.confirm("Confermi eliminazione?")) return;
+    const success = await deleteMedicine(id);
+    if (success) setMedicines((prev) => prev.filter((m) => m.id !== id));
+    else alert("Errore eliminazione");
+  };
 
   const handleEdit = (medicine) => {
-    setEditingMedicine(medicine)
-    setCreating(false)
-  }
+    setEditingMedicine(medicine);
+    setCreating(false);
+  };
 
   const handleUpdate = async (updatedData) => {
-    const success = await updateMedicine(updatedData)
+    const success = await updateMedicine(updatedData);
     if (success) {
-      setMedicines(prev =>
-        prev.map(m => m.id === updatedData.id ? updatedData : m)
-      )
-      setEditingMedicine(null)
+      setMedicines((prev) =>
+        prev.map((m) => (m.id === updatedData.id ? updatedData : m))
+      );
+      setEditingMedicine(null);
     } else {
-      alert('Errore aggiornamento')
+      alert("Errore aggiornamento");
     }
-  }
+  };
 
   const handleCreate = async (newData) => {
-    const success = await addMedicine(newData)
+    const success = await addMedicine(newData);
     if (success) {
-      fetchData()
-      setCreating(false)
+      fetchData();
+      setCreating(false);
     } else {
-      alert('Errore durante l\'inserimento')
+      alert("Errore durante l'inserimento");
     }
-  }
+  };
+
+  const handleSearch = async () => {
+    if (search.trim() === "") {
+      fetchData();
+      return;
+    }
+
+    const results = await searchMedicines(search, filterField);
+    setMedicines(results);
+  };
 
   return (
     <>
+      <div className="input-group mb-3">
+        <select
+          className="form-select"
+          value={filterField}
+          onChange={(e) => setFilterField(e.target.value)}
+          style={{ maxWidth: "200px" }}
+        >
+          <option value="name">Nome</option>
+          <option value="supplierCompany">Ditta</option>
+          <option value="usageList">Uso</option>
+        </select>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Cerca..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button className="btn btn-outline-primary" onClick={handleSearch}>
+          Cerca
+        </button>
+      </div>
+
       <div className="mb-3">
         {!creating && !editingMedicine && (
           <button className="btn btn-success" onClick={() => setCreating(true)}>
@@ -68,8 +109,8 @@ function MedicineList() {
           initialData={editingMedicine || null}
           onSubmit={creating ? handleCreate : handleUpdate}
           onCancel={() => {
-            setCreating(false)
-            setEditingMedicine(null)
+            setCreating(false);
+            setEditingMedicine(null);
           }}
         />
       )}
@@ -89,7 +130,7 @@ function MedicineList() {
         ))}
       </div>
     </>
-  )
+  );
 }
 
-export default MedicineList
+export default MedicineList;
