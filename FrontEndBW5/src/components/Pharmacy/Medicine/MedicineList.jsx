@@ -4,6 +4,7 @@ import {
   updateMedicine,
   addMedicine,
   searchMedicines,
+  getMedicineLocation,
 } from "../../../services/medicineService";
 import MedicineItem from "./MedicineItem";
 import MedicineForm from "./MedicineForm";
@@ -71,6 +72,27 @@ function MedicineList() {
     setMedicines(results);
   };
 
+  const handleShowLocation = async (id) => {
+    const result = await getMedicineLocation(id);
+  
+    if (!result || !result.location || result.location.length < 3) {
+      alert("Posizione non valida o non trovata.");
+      return;
+    }
+  
+    const { name, location } = result;
+  
+    const armadio = location[0];
+    const cassetto = location[1];
+    const riga = location[2];
+  
+    alert(`Posizione del medicinale "${name}":
+  - Armadio: ${armadio}
+  - Cassetto: ${cassetto}
+  - Riga: ${riga}`);
+  };
+  
+
   return (
     <>
       <div className="input-group mb-3">
@@ -125,6 +147,7 @@ function MedicineList() {
               medicine={medicine}
               onDelete={handleDelete}
               onEdit={handleEdit}
+              onShowLocation={handleShowLocation}
             />
           </div>
         ))}
