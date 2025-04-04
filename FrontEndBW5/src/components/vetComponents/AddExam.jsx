@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const AddExam = () => {
   const [message, setMessage] = useState();
@@ -76,9 +76,18 @@ const AddExam = () => {
     getVets();
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <Container>
       <h1>Add new Exam</h1>
+      <Button
+        onClick={() => {
+          navigate(`/Exams/${id.id}`);
+        }}
+      >
+        Go Back
+      </Button>
       <span className="bg-warning rounded-1">{message}</span>
       <Form onSubmit={handleNewExam}>
         <Form.Label className="mt-2 fw-lighter">Exam Date</Form.Label>
